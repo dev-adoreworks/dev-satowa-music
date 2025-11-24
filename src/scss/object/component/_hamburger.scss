@@ -1,0 +1,35 @@
+@use "../../foundation/variables" as v;
+@use "../../foundation/mixin" as m;
+
+.c-hamburger {
+    display: block;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: v.$z-header + 1;
+
+    @include m.mq(md) {
+        display: none;
+    }
+
+    span {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: v.$c-text-main;
+        position: absolute;
+        left: 0;
+        transition: all 0.3s ease;
+
+        &:first-child {
+            top: 0;
+        }
+
+        &:last-child {
+            bottom: 0;
+        }
+    }
+}

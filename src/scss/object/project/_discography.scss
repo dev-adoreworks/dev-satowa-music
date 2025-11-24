@@ -1,0 +1,200 @@
+@use "../../foundation/variables" as v;
+@use "../../foundation/mixin" as m;
+
+.p-discography {
+    background: v.$c-white;
+}
+
+.p-player {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @include m.mq(md) {
+            flex-direction: row;
+            gap: 60px;
+        }
+    }
+
+    &__art {
+        flex: 1;
+        max-width: 400px;
+        display: none; // Hide on SP
+
+        @include m.mq(md) {
+            display: block; // Show on PC
+        }
+    }
+
+    &__image-wrap {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1;
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__overlay-text {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: v.$c-white;
+        z-index: 2;
+
+        h3 {
+            font-family: v.$font-jp;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        span {
+            font-family: v.$font-sans;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+        }
+    }
+
+    &__description {
+        font-family: v.$font-sans;
+        font-size: 0.9rem;
+        color: v.$c-text-sub;
+        line-height: 1.6;
+    }
+
+    &__tracks {
+        flex: 1.5;
+    }
+}
+
+.p-track-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.p-track-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    gap: 15px;
+
+    &:first-child {
+        border-top: 1px solid #eee;
+    }
+
+    &__index {
+        font-family: v.$font-sans;
+        font-size: 0.9rem;
+        color: v.$c-accent;
+        width: 30px;
+    }
+
+    &__thumb {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 4px;
+        display: block; // Show on SP
+
+        @include m.mq(md) {
+            display: none; // Hide on PC
+        }
+    }
+
+    &__info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &__title-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-family: v.$font-jp;
+        font-size: 1rem;
+        color: v.$c-text-main;
+    }
+
+    &__title-en {
+        font-family: v.$font-sans;
+        font-size: 0.8rem;
+        color: v.$c-text-sub;
+    }
+
+    &__album {
+        font-family: v.$font-sans;
+        font-size: 0.75rem;
+        color: v.$c-accent;
+    }
+
+    &__links {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__link {
+        font-family: v.$font-sans;
+        font-size: 0.75rem;
+        color: v.$c-text-sub;
+        text-decoration: underline;
+
+        &:hover {
+            color: v.$c-text-main;
+        }
+    }
+
+    &__time {
+        font-family: v.$font-sans;
+        font-size: 0.9rem;
+        color: v.$c-text-sub;
+    }
+
+    &__play {
+        background: none;
+        border: 1px solid v.$c-text-main;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: v.$c-text-main;
+
+        &:hover {
+            background: v.$c-text-main;
+            color: v.$c-white;
+        }
+
+        .c-icon-stop {
+            display: none;
+        }
+
+        &.is-playing {
+            .c-icon-play {
+                display: none;
+            }
+
+            .c-icon-stop {
+                display: block;
+            }
+        }
+    }
+}
+
+.p-track-list__more {
+    margin-top: 40px;
+    text-align: center;
+}

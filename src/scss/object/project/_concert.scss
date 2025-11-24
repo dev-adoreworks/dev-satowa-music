@@ -1,0 +1,225 @@
+@use "../../foundation/variables" as v;
+@use "../../foundation/mixin" as m;
+
+.p-concert {
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+        &:first-child {
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 0;
+        gap: 20px;
+        text-decoration: none;
+        color: inherit;
+        transition: background-color 0.3s ease;
+
+        @include m.mq(md) {
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: nowrap;
+            padding: 50px 0;
+            gap: 60px;
+        }
+
+        &:hover {
+            .p-concert__action-text {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            .p-concert__action-icon {
+                transform: translate(2px, -2px);
+            }
+        }
+    }
+
+    &__date-wrap {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        grid-template-rows: auto auto;
+        column-gap: 4px;
+        row-gap: 0;
+        align-items: baseline;
+        width: 100%;
+
+        @include m.mq(md) {
+            width: auto;
+            min-width: 140px;
+            grid-template-columns: auto auto;
+        }
+    }
+
+    &__date-year {
+        font-family: v.$font-manrope;
+        font-size: 0.9rem;
+        color: #898989;
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        line-height: 1;
+        margin-bottom: .3rem;
+
+        @include m.mq(md) {
+            grid-column: 1 / 2;
+        }
+    }
+
+    &__date-num {
+        font-family: v.$font-manrope;
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: v.$c-text-main;
+        line-height: 1;
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+
+        @include m.mq(md) {
+            font-size: 2.2rem;
+        }
+    }
+
+    &__date-day {
+        font-family: v.$font-manrope;
+        font-size: 0.75rem;
+        color: #898989;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        margin-left: 0;
+        font-weight: 500;
+        align-self: baseline;
+    }
+
+    &__info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    &__main-row {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+
+        @include m.mq(md) {
+            gap: 25px;
+        }
+    }
+
+    &__city {
+        font-family: v.$font-sans;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: v.$c-text-main;
+
+        @include m.mq(md) {
+            font-size: 0.9rem;
+        }
+    }
+
+    &__separator {
+        display: block;
+        width: 30px;
+        height: 1px;
+        background-color: #ddd;
+
+        @include m.mq(md) {
+            width: 40px;
+        }
+    }
+
+    &__venue-jp {
+        font-family: v.$font-jp;
+        font-size: 1rem;
+        font-weight: 500;
+        color: v.$c-text-main;
+        margin: 0;
+
+        @include m.mq(md) {
+            font-size: 1.1rem;
+        }
+    }
+
+    &__event-title {
+        font-family: v.$font-sans;
+        font-size: 0.8rem;
+        color: #888;
+        margin: 0;
+        line-height: 1.6;
+        margin-top: 1rem;
+
+        @include m.mq(md) {
+            font-size: 0.83rem;
+        }
+    }
+
+    &__venue-en {
+        font-family: v.$font-sans;
+        font-size: 0.75rem;
+        color: #aaa;
+        margin: 0;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+
+    &__action {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: auto;
+
+        @include m.mq(md) {
+            margin-left: 0;
+            min-width: 150px;
+            justify-content: flex-end;
+        }
+    }
+
+    &__action-text {
+        font-family: v.$font-sans;
+        font-size: 0.8rem;
+        color: v.$c-text-main;
+        opacity: 0;
+        transform: translateX(10px);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        display: none;
+
+        @include m.mq(md) {
+            display: block;
+        }
+    }
+
+    &__action-icon {
+        color: v.$c-text-main;
+        transition: transform 0.3s ease;
+    }
+
+    &__archive {
+        margin-top: 60px;
+        text-align: center;
+
+        @include m.mq(md) {
+            margin-top: 80px;
+        }
+    }
+
+
+}

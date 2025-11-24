@@ -1,0 +1,35 @@
+@use "../foundation/variables" as v;
+@use "../foundation/mixin" as m;
+
+.l-main {
+    width: 100%;
+    overflow: hidden;
+}
+
+.l-section {
+    padding: 80px 0;
+
+    @include m.mq(md) {
+        padding: 120px 0;
+    }
+}
+
+.l-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.c-section-title {
+    font-family: v.$font-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+
+    @include m.mq(md) {
+        font-size: 4rem;
+    }
+}

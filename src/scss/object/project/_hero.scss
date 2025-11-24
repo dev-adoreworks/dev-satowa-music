@@ -1,0 +1,108 @@
+@use "../../foundation/variables" as v;
+@use "../../foundation/mixin" as m;
+
+.p-hero {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 80px; // Space for fixed header
+
+    @include m.mq(md) {
+        padding-top: 100px;
+    }
+
+    &__text-area {
+        width: 100%;
+        padding: 80px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: v.$c-white;
+
+        @include m.mq(md) {
+            padding: 140px 20px;
+        }
+    }
+
+    &__text-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        max-width: 1200px;
+        width: 100%;
+
+        @include m.mq(md) {
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 40px;
+        }
+    }
+
+    &__name {
+        font-family: v.$font-serif;
+        font-size: 3.5rem;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        line-height: 1;
+        color: v.$c-text-main;
+
+        @include m.mq(md) {
+            font-size: 6rem;
+        }
+    }
+
+    &__subtitle {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__subtitle-jp {
+        font-family: v.$font-jp;
+        font-size: 0.9rem;
+        color: v.$c-text-main;
+        letter-spacing: 0.05em;
+        font-weight: 500;
+
+        @include m.mq(md) {
+            font-size: 1rem;
+        }
+    }
+
+    &__subtitle-en {
+        font-family: v.$font-sans;
+        font-size: 0.7rem;
+        color: v.$c-accent;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+
+        @include m.mq(md) {
+            font-size: 0.75rem;
+        }
+    }
+
+    &__image-area {
+        width: 100%;
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        min-height: 400px;
+    }
+
+    &__parallax-window {
+        width: 100%;
+        height: 120%;
+        position: absolute;
+        top: -10%;
+        left: 0;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

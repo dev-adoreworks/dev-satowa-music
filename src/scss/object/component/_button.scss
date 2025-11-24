@@ -1,0 +1,72 @@
+@use "../../foundation/variables" as v;
+
+.c-button {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: v.$font-sans;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+
+    &--primary {
+        background: v.$c-text-main;
+        color: v.$c-white;
+
+        &:hover {
+            background: transparent;
+            color: v.$c-text-main;
+            border-color: v.$c-text-main;
+        }
+    }
+
+    &--secondary {
+        background: transparent;
+        color: v.$c-text-main;
+        border: 1px solid v.$c-text-main;
+
+        &:hover {
+            background: v.$c-text-main;
+            color: v.$c-white;
+        }
+    }
+}
+
+.c-button-square {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border: 1px solid v.$c-text-main;
+    color: v.$c-text-main;
+    text-decoration: none;
+    font-family: v.$font-sans;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s ease;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: v.$c-text-main;
+        transform: translateX(-100%);
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        z-index: -1;
+    }
+
+    &:hover {
+        color: v.$c-white;
+
+        &::before {
+            transform: translateX(0);
+        }
+    }
+}

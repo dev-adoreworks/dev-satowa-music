@@ -1,0 +1,137 @@
+@use "../../foundation/variables" as v;
+@use "../../foundation/mixin" as m;
+
+.p-videos {
+    background: v.$c-bg;
+    overflow: hidden;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 40px;
+    }
+
+    &__title-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        font-family: v.$font-sans;
+        font-size: 0.8rem;
+        letter-spacing: 0.2em;
+        color: v.$c-accent;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-family: v.$font-serif;
+        font-size: 3rem;
+        color: v.$c-text-main;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 10px;
+
+        button {
+            width: 40px;
+            height: 40px;
+            border: 1px solid v.$c-text-main;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: v.$c-text-main;
+
+            &:hover {
+                background: v.$c-text-main;
+                color: v.$c-white;
+            }
+        }
+    }
+
+    &__carousel {
+        padding-bottom: 40px;
+        overflow: visible;
+    }
+
+    &__channel-link {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.p-video-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    &__thumb {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16/9;
+        overflow: hidden;
+        border-radius: 4px;
+        margin-bottom: 15px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        &:hover img {
+            transform: scale(1.05);
+        }
+    }
+
+    &__play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: v.$c-text-main;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    &:hover &__play {
+        opacity: 1;
+    }
+
+    &__duration {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.7);
+        color: v.$c-white;
+        padding: 2px 6px;
+        border-radius: 2px;
+        font-size: 0.75rem;
+        font-family: v.$font-sans;
+    }
+
+    &__title {
+        font-family: v.$font-sans;
+        font-size: 1rem;
+        color: v.$c-text-main;
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,59 @@
+@use "../../foundation/variables" as v;
+
+.c-video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: v.$z-modal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+
+    &.is-active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    &__content {
+        position: relative;
+        width: 90%;
+        max-width: 900px;
+        aspect-ratio: 16/9;
+        background: #000;
+        z-index: 1;
+    }
+
+    &__close {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        background: none;
+        border: none;
+        color: v.$c-white;
+        cursor: pointer;
+    }
+
+    &__iframe-wrap {
+        width: 100%;
+        height: 100%;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
