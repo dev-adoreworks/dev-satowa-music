@@ -25,14 +25,15 @@ requestAnimationFrame(raf);
 
 // Initialize Swiper
 const swiper = new Swiper('.p-videos__carousel', {
-    slidesPerView: 1,
+    slidesPerView: 1.2,
     spaceBetween: 20,
-    centeredSlides: true,
-    loop: true,
+    centeredSlides: false,
+    loop: false,
     breakpoints: {
         768: {
             slidesPerView: 3,
-            spaceBetween: 40,
+            spaceBetween: 30,
+            centeredSlides: false,
         }
     },
     navigation: {
