@@ -114,8 +114,13 @@ trackItems.forEach(item => {
             const title = titleGroup.querySelector('.p-track-item__title').textContent;
 
             if (albumArt && newImage) {
-                // Simple fade out/in could be added here, but direct switch for responsiveness
-                albumArt.src = newImage;
+                // Get the base path from the current location
+                const basePath = document.querySelector('base')?.href || window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '/');
+                // If the image path doesn't start with http or /, prepend the base path
+                const imagePath = newImage.startsWith('http') || newImage.startsWith('/')
+                    ? newImage
+                    : new URL(newImage, basePath).href;
+                albumArt.src = imagePath;
             }
             if (albumTitle) {
                 albumTitle.textContent = title;
