@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/dev-satowa-music/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WongWingTsan | Meditative Pianist</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script type="module" crossorigin src="/dev-satowa-music/assets/index-B9v0ilPR.js"></script>
+  <link rel="stylesheet" crossorigin href="/dev-satowa-music/assets/index-CupnHJDP.css">
+</head>
+
+<body>
+  <!-- Mouse Follower -->
+  <div class="c-cursor"></div>
+
+  <div id="app">
+    <header class="l-header">
+      <div class="l-header__inner">
+        <h1 class="l-header__logo">
+          <img src="/dev-satowa-music/logo.png" alt="SATOWTA" width="60" height="60">
+        </h1>
+
+        <!-- Desktop Nav -->
+        <nav class="l-header__nav u-desktop-only">
+          <ul>
+            <li><a href="#concert">Concert</a></li>
+            <li><a href="#discography">Discography</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Hamburger Button -->
+        <button class="c-hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Fullscreen Nav -->
+    <nav class="l-mobile-nav">
+      <button class="l-mobile-nav__close" aria-label="Close Menu">
+        <span></span>
+        <span></span>
+      </button>
+      <div class="l-mobile-nav__inner">
+        <ul>
+          <li><a href="#top" class="l-mobile-nav__link">Top</a></li>
+          <li><a href="#concert" class="l-mobile-nav__link">Concert</a></li>
+          <li><a href="#discography" class="l-mobile-nav__link">Discography</a></li>
+          <li><a href="#profile" class="l-mobile-nav__link">Profile</a></li>
+          <li><a href="#contact" class="l-mobile-nav__link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="l-main">
+      <!-- Hero Section -->
+      <section class="p-hero" id="top">
+        <div class="p-hero__text-area">
+          <div class="l-container">
+            <div class="p-hero__text-inner">
+              <h2 class="p-hero__name">Wong Wing Tsan.</h2>
+              <div class="p-hero__subtitle">
+                <p class="p-hero__subtitle-jp">瞑想のピアニスト ウォン・ウィン・ツァン</p>
+                <p class="p-hero__subtitle-en">The Meditative Pianist, Wong Wing Tsun.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-hero__image-area">
+          <div class="p-hero__parallax-window">
+            <img src="/dev-satowa-music/hero_new.png" alt="Wong Wing Tsan at piano" class="p-hero__image" data-speed="0.5">
+          </div>
+        </div>
+      </section>
+
+      <!-- Concert Section -->
+      <section class="p-concert l-section" id="concert">
+        <div class="l-container">
+          <div class="c-section-header">
+            <h2 class="c-section-header__title">Concerts</h2>
+            <p class="c-section-header__subtitle">UPCOMING PERFORMANCES</p>
+          </div>
+
+          <div class="p-concert__list">
+            <ul class="p-concert__list">
+              <li class="p-concert__item">
+                <a href="#" class="p-concert__link">
+                  <div class="p-concert__date-wrap">
+                    <span class="p-concert__date-num">11/23</span>
+                    <span class="p-concert__date-day">SUN</span>
+                  </div>
+                  <div class="p-concert__info">
+                    <div class="p-concert__main-row">
+                      <span class="p-concert__city">TOKYO</span>
+                      <span class="p-concert__separator"></span>
+                      <h3 class="p-concert__venue-jp">自由学園 記念講堂</h3>
+                    </div>
+                    <p class="p-concert__event-title">自由学園 オープンキャンパス イベント「JIYU1123」にて
+                      ウォン・ウィンツァン ピアノコンサート</p>
+                  </div>
+                  <div class="p-concert__action">
+                    <span class="p-concert__action-text">このコンサートの詳細</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      class="p-concert__action-icon">
+                      <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+              <li class="p-concert__item">
+                <a href="#" class="p-concert__link">
+                  <div class="p-concert__date-wrap">
+                    <span class="p-concert__date-num">11/24</span>
+                    <span class="p-concert__date-day">MON</span>
+                  </div>
+                  <div class="p-concert__info">
+                    <div class="p-concert__main-row">
+                      <span class="p-concert__city">TOKYO</span>
+                      <span class="p-concert__separator"></span>
+                      <h3 class="p-concert__venue-jp">ホリスティック・スペース＝アクエリアス</h3>
+                    </div>
+                    <p class="p-concert__event-title">献 × 重子 × ウォン × 神尾 の
+                      アクエリアス・セッションvol.4
+                      〜NVC（ノンバイオレント コミュニケーション）と 響き合う対話〜</p>
+                  </div>
+                  <div class="p-concert__action">
+                    <span class="p-concert__action-text">このコンサートの詳細</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      class="p-concert__action-icon">
+                      <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+              <li class="p-concert__item">
+                <a href="#" class="p-concert__link">
+                  <div class="p-concert__date-wrap">
+                    <span class="p-concert__date-year">2025</span>
+                    <span class="p-concert__date-num">01/17</span>
+                    <span class="p-concert__date-day">SAT</span>
+                  </div>
+                  <div class="p-concert__info">
+                    <div class="p-concert__main-row">
+                      <span class="p-concert__city">KANAGAWA</span>
+                      <span class="p-concert__separator"></span>
+                      <h3 class="p-concert__venue-jp">葉山福祉文化会館 大ホール</h3>
+                    </div>
+                    <p class="p-concert__event-title">真砂 秀朗 ＆ ウォン・ウィンツァン ジョイントコンサート（能登半島被災地支援） PLEASURE OF LIFE</p>
+                  </div>
+                  <div class="p-concert__action">
+                    <span class="p-concert__action-text">このコンサートの詳細</span>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
+                      class="p-concert__action-icon">
+                      <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-concert__archive">
+            <a href="/concerts" class="c-button-square">
+              View All Concerts
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Discography (Music) -->
+      <section class="p-discography l-section" id="discography">
+        <div class="l-container">
+          <h2 class="c-section-title">Music</h2>
+          <div class="p-player">
+            <div class="p-player__inner">
+              <!-- Left: Album Art & Info -->
+              <div class="p-player__art">
+                <div class="p-player__image-wrap">
+                  <img src="/dev-satowa-music/album1.jpg" alt="海ととんぼの遠く Album Cover">
+                  <div class="p-player__overlay-text">
+                    <h3>海ととんぼの遠く</h3>
+                    <span>WONG WING TSAN</span>
+                  </div>
+                </div>
+                <p class="p-player__description">
+                  Available on major streaming platforms.
+                </p>
+              </div>
+
+              <!-- Right: Tracklist -->
+              <div class="p-player__tracks">
+                <ul class="p-track-list">
+                  <li class="p-track-item" data-image="/album1.jpg"
+                    data-audio="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+                    <span class="p-track-item__index">01</span>
+                    <img src="/dev-satowa-music/album1.jpg" alt="海ととんぼの遠く" class="p-track-item__thumb">
+                    <div class="p-track-item__info">
+                      <div class="p-track-item__title-group">
+                        <span class="p-track-item__title">海ととんぼの遠く</span>
+                        <span class="p-track-item__title-en">Sea and Dragonfly in the Distance</span>
+                      </div>
+                      <p class="p-track-item__album">from 海ととんぼの遠く</p>
+                      <div class="p-track-item__links">
+                        <a href="#" class="p-track-item__link">Amazon</a>
+                        <a href="#" class="p-track-item__link">LinkCore</a>
+                      </div>
+                    </div>
+                    <span class="p-track-item__time">4:32</span>
+                    <button class="p-track-item__play" aria-label="Play">
+                      <svg class="c-icon-play" width="12" height="14" viewBox="0 0 12 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.5 7L0.5 13.0622L0.5 0.937822L11.5 7Z" fill="currentColor" />
+                      </svg>
+                      <svg class="c-icon-stop" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="12" height="12" fill="currentColor" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="p-track-item" data-image="/album2.jpg"
+                    data-audio="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3">
+                    <span class="p-track-item__index">02</span>
+                    <img src="/dev-satowa-music/album2.jpg" alt="Sound of Sara" class="p-track-item__thumb">
+                    <div class="p-track-item__info">
+                      <div class="p-track-item__title-group">
+                        <span class="p-track-item__title">Sound of Sara</span>
+                        <span class="p-track-item__title-en">Sound of Sara</span>
+                      </div>
+                      <p class="p-track-item__album">from Sound of Sara</p>
+                      <div class="p-track-item__links">
+                        <a href="#" class="p-track-item__link">Amazon</a>
+                        <a href="#" class="p-track-item__link">LinkCore</a>
+                      </div>
+                    </div>
+                    <span class="p-track-item__time">5:15</span>
+                    <button class="p-track-item__play" aria-label="Play">
+                      <svg class="c-icon-play" width="12" height="14" viewBox="0 0 12 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.5 7L0.5 13.0622L0.5 0.937822L11.5 7Z" fill="currentColor" />
+                      </svg>
+                      <svg class="c-icon-stop" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="12" height="12" fill="currentColor" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="p-track-item" data-image="/album3.jpg"
+                    data-audio="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3">
+                    <span class="p-track-item__index">03</span>
+                    <img src="/dev-satowa-music/album3.jpg" alt="SATOWA" class="p-track-item__thumb">
+                    <div class="p-track-item__info">
+                      <div class="p-track-item__title-group">
+                        <span class="p-track-item__title">SATOWA</span>
+                        <span class="p-track-item__title-en">SATOWA</span>
+                      </div>
+                      <p class="p-track-item__album">from SATOWA</p>
+                      <div class="p-track-item__links">
+                        <a href="#" class="p-track-item__link">Amazon</a>
+                        <a href="#" class="p-track-item__link">LinkCore</a>
+                      </div>
+                    </div>
+                    <span class="p-track-item__time">3:45</span>
+                    <button class="p-track-item__play" aria-label="Play">
+                      <svg class="c-icon-play" width="12" height="14" viewBox="0 0 12 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.5 7L0.5 13.0622L0.5 0.937822L11.5 7Z" fill="currentColor" />
+                      </svg>
+                      <svg class="c-icon-stop" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="12" height="12" fill="currentColor" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="p-track-item" data-image="/album4.jpg"
+                    data-audio="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3">
+                    <span class="p-track-item__index">04</span>
+                    <img src="/dev-satowa-music/album4.jpg" alt="ASIAN DOLL" class="p-track-item__thumb">
+                    <div class="p-track-item__info">
+                      <div class="p-track-item__title-group">
+                        <span class="p-track-item__title">ASIAN DOLL</span>
+                        <span class="p-track-item__title-en">ASIAN DOLL</span>
+                      </div>
+                      <p class="p-track-item__album">from ASIAN DOLL</p>
+                      <div class="p-track-item__links">
+                        <a href="#" class="p-track-item__link">Amazon</a>
+                        <a href="#" class="p-track-item__link">LinkCore</a>
+                      </div>
+                    </div>
+                    <span class="p-track-item__time">4:10</span>
+                    <button class="p-track-item__play" aria-label="Play">
+                      <svg class="c-icon-play" width="12" height="14" viewBox="0 0 12 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.5 7L0.5 13.0622L0.5 0.937822L11.5 7Z" fill="currentColor" />
+                      </svg>
+                      <svg class="c-icon-stop" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="12" height="12" fill="currentColor" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li class="p-track-item" data-image="/album5.jpg"
+                    data-audio="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3">
+                    <span class="p-track-item__index">05</span>
+                    <img src="/dev-satowa-music/album5.jpg" alt="光の華" class="p-track-item__thumb">
+                    <div class="p-track-item__info">
+                      <div class="p-track-item__title-group">
+                        <span class="p-track-item__title">光の華</span>
+                        <span class="p-track-item__title-en">Flower of Light</span>
+                      </div>
+                      <p class="p-track-item__album">from 光の華</p>
+                      <div class="p-track-item__links">
+                        <a href="#" class="p-track-item__link">Amazon</a>
+                        <a href="#" class="p-track-item__link">LinkCore</a>
+                      </div>
+                    </div>
+                    <span class="p-track-item__time">6:20</span>
+                    <button class="p-track-item__play" aria-label="Play">
+                      <svg class="c-icon-play" width="12" height="14" viewBox="0 0 12 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.5 7L0.5 13.0622L0.5 0.937822L11.5 7Z" fill="currentColor" />
+                      </svg>
+                      <svg class="c-icon-stop" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="12" height="12" fill="currentColor" />
+                      </svg>
+                    </button>
+                  </li>
+                </ul>
+                <div class="p-track-list__more">
+                  <a href="/discography" class="c-button-square">
+                    View All Discography
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video Carousel -->
+      <section class="p-videos l-section">
+        <div class="l-container">
+          <div class="p-videos__header">
+            <div class="p-videos__title-wrap">
+              <span class="p-videos__label">WATCH</span>
+              <h2 class="p-videos__title">Videos</h2>
+            </div>
+            <div class="p-videos__nav">
+              <button class="p-videos__prev" aria-label="Previous slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <button class="p-videos__next" aria-label="Next slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+
+
+          <div class="swiper p-videos__carousel">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="p-video-card" data-youtube-id="T4SwogLT01M">
+                  <div class="p-video-card__thumb">
+                    <img
+                      src="https://images.unsplash.com/photo-1552422535-c45813c61732?q=80&w=2070&auto=format&fit=crop&sat=-100"
+                      alt="Video 1">
+                    <div class="p-video-card__play">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 5V19L19 12L8 5Z" />
+                      </svg>
+                    </div>
+                    <span class="p-video-card__duration">-:--</span>
+                  </div>
+                  <h3 class="p-video-card__title">Performance Video 1</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="p-video-card" data-youtube-id="i998MiYAGE0">
+                  <div class="p-video-card__thumb">
+                    <img
+                      src="https://images.unsplash.com/photo-1470019693664-1d202d2c0907?q=80&w=2069&auto=format&fit=crop&sat=-100"
+                      alt="Video 2">
+                    <div class="p-video-card__play">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 5V19L19 12L8 5Z" />
+                      </svg>
+                    </div>
+                    <span class="p-video-card__duration">-:--</span>
+                  </div>
+                  <h3 class="p-video-card__title">Performance Video 2</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="p-video-card" data-youtube-id="TxkD2apjYDA">
+                  <div class="p-video-card__thumb">
+                    <img
+                      src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070&auto=format&fit=crop&sat=-100"
+                      alt="Video 3">
+                    <div class="p-video-card__play">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 5V19L19 12L8 5Z" />
+                      </svg>
+                    </div>
+                    <span class="p-video-card__duration">-:--</span>
+                  </div>
+                  <h3 class="p-video-card__title">Performance Video 3</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="p-video-card" data-youtube-id="waqp1LKqD2A">
+                  <div class="p-video-card__thumb">
+                    <img
+                      src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=2070&auto=format&fit=crop&sat=-100"
+                      alt="Video 4">
+                    <div class="p-video-card__play">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 5V19L19 12L8 5Z" />
+                      </svg>
+                    </div>
+                    <span class="p-video-card__duration">-:--</span>
+                  </div>
+                  <h3 class="p-video-card__title">Performance Video 4</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="p-video-card" data-youtube-id="V03RMfo4yxw">
+                  <div class="p-video-card__thumb">
+                    <img
+                      src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?q=80&w=2070&auto=format&fit=crop&sat=-100"
+                      alt="Video 5">
+                    <div class="p-video-card__play">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 5V19L19 12L8 5Z" />
+                      </svg>
+                    </div>
+                    <span class="p-video-card__duration">-:--</span>
+                  </div>
+                  <h3 class="p-video-card__title">Performance Video 5</h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="p-video-card" data-youtube-id="6K62m7Ua2wM">
+                  <div class="p-video-card__thumb">
+                    <img
+                      src="https://images.unsplash.com/photo-1464618663641-bbdd760ae19b?q=80&w=2070&auto=format&fit=crop&sat=-100"
+                      alt="Video 6">
+                    <div class="p-video-card__play">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 5V19L19 12L8 5Z" />
+                      </svg>
+                    </div>
+                    <span class="p-video-card__duration">-:--</span>
+                  </div>
+                  <h3 class="p-video-card__title">Performance Video 6</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-videos__channel-link">
+            <a href="https://www.youtube.com/@wongwingtsan/videos" target="_blank" rel="noopener noreferrer"
+              class="c-button-square">
+              <span>View YouTube Channel</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Profile -->
+      <section class="p-profile l-section" id="profile">
+        <div class="l-container">
+          <h2 class="c-section-title">Profile</h2>
+          <div class="p-profile__content">
+            <p>WongWingTsan is a pianist known for his meditative and transcendent style...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact / CTA -->
+      <section class="p-contact l-section" id="contact">
+        <div class="l-container">
+          <div class="p-contact__cta">
+            <h2>Request for Performance</h2>
+            <p>Bring the sound of meditation to your event.</p>
+            <a href="mailto:contact@example.com" class="c-button c-button--primary">Contact Us</a>
+          </div>
+          <div class="p-contact__donation">
+            <h3>Support the Art</h3>
+            <p>Your donation helps sustain the music.</p>
+            <a href="#" class="c-button c-button--secondary">Donate</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-container">
+        <p>&copy; 2025 WongWingTsan. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Video Modal -->
+  <div class="c-video-modal">
+    <div class="c-video-modal__overlay"></div>
+    <div class="c-video-modal__content">
+      <button class="c-video-modal__close" aria-label="Close video">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="c-video-modal__iframe-wrap">
+        <iframe id="youtube-iframe" src="" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
