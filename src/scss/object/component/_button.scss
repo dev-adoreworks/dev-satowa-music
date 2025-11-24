@@ -35,38 +35,59 @@
 }
 
 .c-button-square {
-    display: inline-flex;
+    display: inline-flex !important;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     padding: 15px 30px;
-    border: 1px solid v.$c-text-main;
-    color: v.$c-text-main;
-    text-decoration: none;
-    font-family: v.$font-sans;
+    border: 1px solid v.$c-text-main !important;
+    background-color: transparent !important;
+    color: v.$c-text-main !important;
+    text-decoration: none !important;
+    font-family: v.$font-sans !important;
     font-size: 0.9rem;
     letter-spacing: 0.05em;
     position: relative;
-    overflow: hidden;
-    transition: color 0.4s ease;
+    transition: all 0.3s ease !important;
+    cursor: pointer;
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: v.$c-text-main;
-        transform: translateX(-100%);
-        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-        z-index: -1;
+    svg {
+        transition: all 0.3s ease;
+
+        path {
+            stroke: v.$c-text-main;
+            transition: stroke 0.3s ease;
+        }
     }
 
     &:hover {
-        color: v.$c-white;
+        background-color: v.$c-text-main !important;
+        color: v.$c-white !important;
+        border-color: v.$c-text-main !important;
 
-        &::before {
-            transform: translateX(0);
+        svg {
+            transform: translateX(3px);
+
+            path {
+                stroke: v.$c-white !important;
+            }
+        }
+    }
+}
+
+// Specific overrides for sections
+.p-concert .c-button-square,
+.p-discography .c-button-square,
+.p-videos .c-button-square {
+    background-color: transparent !important;
+    color: v.$c-text-main !important;
+
+    &:hover {
+        background-color: v.$c-text-main !important;
+        color: v.$c-white !important;
+
+        svg path {
+            stroke: v.$c-white !important;
         }
     }
 }
