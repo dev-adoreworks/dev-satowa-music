@@ -105,4 +105,22 @@
         height: 100%;
         object-fit: cover;
     }
+
+    &__credit {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        font-family: v.$font-sans;
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.8);
+        letter-spacing: 0.05em;
+        z-index: 10;
+        margin: 0;
+
+        @include m.mq(md) {
+            bottom: 30px;
+            left: 40px;
+            font-size: 0.75rem;
+        }
+    }
 }
